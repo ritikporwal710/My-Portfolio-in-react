@@ -46,6 +46,27 @@
   }
 }
 
+// .profiles-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-wrap: wrap;
+//   gap: 4rem;
+//   padding-top: 25px;
+//   width: 1290px;
+//   // margin-left: 135px;
+
+//   @media (max-width: 1400px) {
+//     width: 100%;
+//     margin-left: 0;
+//   }
+
+//   @media (max-width: 768px) {
+//     gap: 2rem;
+//     padding-top: 15px;
+//   }
+// }
+
 .profiles-container {
   display: flex;
   justify-content: center;
@@ -53,13 +74,10 @@
   flex-wrap: wrap;
   gap: 4rem;
   padding-top: 25px;
-  width: 1290px;
-  margin-left: 135px;
 
-  @media (max-width: 1400px) {
-    width: 100%;
-    margin-left: 0;
-  }
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     gap: 2rem;
