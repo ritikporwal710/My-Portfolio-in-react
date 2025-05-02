@@ -1,0 +1,82 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: rgba($color4, 0.05);
+  transition: all 0.3s ease;
+  
+  .project-image {
+    height: 180px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+  }
+  
+  &:hover .project-image img {
+    transform: scale(1.1);
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: $color4;
+    }
+    
+    .tech-stack {
+      font-size: 0.9rem;
+      color: rgba($color4, 0.7);
+      margin-bottom: 1.5rem;
+    }
+    
+    .project-link {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.2rem;
+      background: linear-gradient(270deg, $color3 10%, #b415ff 100%);
+      color: white;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(120, 61, 252, 0.4);
+      }
+      
+      svg {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-image {
+      height: 160px;
+    }
+    
+    .project-content {
+      padding: 1.2rem;
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

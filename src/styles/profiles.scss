@@ -1,0 +1,158 @@
+.profiles {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin: 40px 170px;
+  color: whitesmoke;
+  padding-top: 10px;
+
+  @media (max-width: 1200px) {
+    margin: 40px 100px;
+  }
+
+  @media (max-width: 768px) {
+    margin: 40px 50px;
+    height: auto;
+    gap: 40px;
+  }
+
+  @media (max-width: 480px) {
+    margin: 40px 20px;
+  }
+}
+
+#profiles-title {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // position: relative;
+  font-size: 32px;
+  font-weight: 600;
+  background: linear-gradient(264deg, $color3 20%, #b415ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    margin-top: 60px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+    margin-top: 40px;
+  }
+}
+
+.profiles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding-top: 25px;
+  width: 1290px;
+  margin-left: 135px;
+
+  @media (max-width: 1400px) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  @media (max-width: 768px) {
+    gap: 2rem;
+    padding-top: 15px;
+  }
+}
+
+.profiles-box {
+  flex: 1 1 10rem;
+  height: 420px;
+  // width: 200px;
+  // background: var(--second-bg-color);
+  //   background: linear-gradient(270deg, $color3 10%, #b415ff 100%);
+
+  padding: 3rem 2rem 4rem;
+  border-radius: 10px;
+  text-align: center;
+  //   gap: 20px;
+  //   border: 0.2rem solid white;
+  box-shadow: 0 0 10px 3px #783dfc;
+
+  transition: 0.1s ease;
+
+  @media (max-width: 768px) {
+    height: 380px;
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  @media (max-width: 480px) {
+    flex: 1 1 100%;
+    height: 350px;
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  svg {
+    @media (max-width: 768px) {
+      width: 80px;
+      height: 80px;
+    }
+
+    @media (max-width: 480px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.profiles-container .profiles-box:hover {
+  //   border-color: #b415ff;
+  box-shadow: 0 0 10px 11px #783dfc;
+  transform: scale(1.02);
+}
+.profiles-box p {
+  margin: 20px;
+}
+.profiles-box h3 {
+  margin: 20px;
+  // color: #018103;
+  font-weight: bold;
+  background: linear-gradient(270deg, $color3 10%, green 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gitg {
+  padding-top: 0px;
+}
+#box2 {
+  margin: 5px;
+  padding: 32px 30px;
+}
+#box1 {
+  padding-top: 50px;
+}
+#box2 h3 {
+  margin: 10px;
+}
+
+#box2 svg {
+  @media (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
+
+  @media (max-width: 480px) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.footer-subscribe {
+  @media (max-width: 480px) {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

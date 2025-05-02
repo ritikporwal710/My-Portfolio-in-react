@@ -1,0 +1,128 @@
+nav {
+  width: 100%;
+  height: 90px;
+  background-color: $color1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $p;
+  position: sticky;
+  top: 0%;
+  z-index: 60;
+
+  @media (max-width: 1200px) {
+    padding: 0 5%;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 4%;
+  }
+
+  > h2 {
+    font-size: 2rem;
+    color: whitesmoke;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @media (max-width: 992px) {
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      position: fixed;
+      flex-direction: column;
+      top: 90px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 90px);
+      background-color: $color1;
+      padding: 2rem 0;
+      transition: all 0.3s ease;
+      z-index: 50;
+
+      &.active {
+        left: 0;
+      }
+    }
+
+    a {
+      color: whitesmoke;
+      font-weight: 500;
+      transition: all 0.2s;
+      letter-spacing: 1px;
+
+      @media (max-width: 992px) {
+        font-size: 0.9rem;
+      }
+
+      &:hover {
+        color: $color3;
+        background: linear-gradient(300deg, whitesmoke 17%, #b037e8 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .email-btn button {
+      border: 1px solid $color6_1;
+      padding: 0.5rem 2rem;
+      border: none;
+      border-radius: 8px;
+      background-color: $color3;
+      cursor: pointer;
+      color: $color6;
+      letter-spacing: 1px;
+      font-weight: bold;
+      transition: all 0.3s;
+      background: linear-gradient(270deg, $color3 10%, #b415ff 100%);
+
+      @media (max-width: 992px) {
+        padding: 0.4rem 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        padding: 0.3rem 1.2rem;
+        font-size: 0.8rem;
+      }
+
+      &:hover {
+        background: linear-gradient(270deg, $color3 10%, green 100%);
+        color: whitesmoke;
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+      color: whitesmoke;
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+}
+
+#naming {
+  background: linear-gradient(270deg, $color3 10%, #b415ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,150 @@
+#achievements {
+  width: 100%;
+  height: 100vh;
+  background-color: $color1;
+  padding-top: 100px;
+  padding-left: -40px;
+
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-left: 0;
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 60px;
+  }
+
+  .timelineBox {
+    width: 100%;
+    position: relative;
+    max-width: 1260px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      background-color: $color5;
+      top: 0%;
+      bottom: 0%;
+      left: 50%;
+      margin-left: -3px;
+
+      @media (max-width: 768px) {
+        left: 30px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .timelineItem {
+    padding: 1rem 3rem;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 1rem 1rem 1rem 60px;
+    }
+
+    &:nth-child(odd) {
+      text-align: right;
+
+      @media (max-width: 768px) {
+        text-align: left;
+      }
+
+      &::after {
+        animation: upanddown 0.3s infinite ease-in alternate;
+      }
+    }
+
+    &:nth-child(even) {
+      text-align: left;
+
+      &::after {
+        animation: upanddown 0.6s infinite ease-in alternate;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: $color1;
+      border: 4px solid $color5;
+      top: 45px;
+      border-radius: 50%;
+      z-index: 1;
+
+      @media (max-width: 768px) {
+        left: 18px;
+        right: auto;
+      }
+    }
+
+    > div {
+      padding: 20px 25px;
+      background-color: $color5;
+      color: $color1;
+      border-radius: 8px;
+      background: linear-gradient(270deg, $color3 10%, #b415ff 100%);
+      color: whitesmoke;
+      font-size: 12px;
+
+      @media (max-width: 480px) {
+        padding: 15px 20px;
+      }
+    }
+  }
+
+  .leftTimeline {
+    left: 0;
+  }
+
+  .rightTimeline {
+    left: 50%;
+
+    @media (max-width: 768px) {
+      left: 0;
+    }
+
+    &::after {
+      left: -16px;
+
+      @media (max-width: 768px) {
+        left: 18px;
+      }
+    }
+  }
+}
+
+#achieved {
+  color: whitesmoke;
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
+}
+
+#date {
+  padding-top: 5px;
+  font-weight: bold;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+}
