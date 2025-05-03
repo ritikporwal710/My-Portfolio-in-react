@@ -35,7 +35,7 @@ const Projects = () => {
         />
         <ProjectCard
           name={image_portfolio}
-          link={"https://ritikport.onrender.com"}
+          link={"https://ritik-portfolio-b4rk.onrender.com"}
           title="Portfolio Website"
           tech="JavaScript, React"
         />
